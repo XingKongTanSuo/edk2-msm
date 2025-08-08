@@ -16,8 +16,8 @@ APRIORI DXE {
   INF ArmPkg/Drivers/TimerDxe/TimerDxe.inf
 
   FILE DRIVER = f541d663-4a48-40aa-aabf-ff158ccae34c {
-    SECTION DXE_DEPEX = Platform/EFI_Binaries/Drivers/sm7150/SmemDxe/SmemDxe.depex
-    SECTION PE32 = Platform/EFI_Binaries/Drivers/sm7150/SmemDxe/SmemDxe.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/SmemDxe/SmemDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/SmemDxe/SmemDxe.efi
     SECTION UI = "SmemDxe"
   }
 
