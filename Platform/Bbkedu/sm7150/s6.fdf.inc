@@ -5,8 +5,8 @@
     SECTION UI = "ClockDxe"
   }
   FILE DRIVER = 8E9BD160-B184-11DF-94E2-0800200C9A66 {
-    SECTION DXE_DEPEX = Platform\bbk_drivers\DALSYSDxe\DALSYSDxe.depex
-    SECTION PE32 = Platform\bbk_drivers\DALSYSDxe\DALSYSDxe.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/DALSYSDxe/DALSYSDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/DALSYSDxe/DALSYSDxe.efi
     SECTION UI = "DALSys"
   }
   FILE DRIVER = AF9763A2-033B-4109-8E17-56A98D380C92 {
