@@ -28,6 +28,17 @@
     SECTION PE32 = Platform/bbk_drivers/UsbfnDwc3Dxe.efi
     SECTION UI = "UsbfnDwc3Dxe"
   }
+  
+  FILE DRIVER =B7F50E91-A759-412C-ADE4-DCD03E7F7C28 {
+    SECTION DXE_DEPEX = Platform/bbk_drivers/XhciDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/XhciDxe.efi
+    SECTION UI = "XhciDxe"
+  }
+  
+  FILE DRIVER = BEB12BEE-F6E1-11E1-9FB8-6C626DE4AEB1 {
+    SECTION PE32 = Platform/bbk_drivers/XhciPciEmulation.efi
+    SECTION UI = "XhciPciEmulation"
+  }
 
 //FILE FREEFORM = 25462CDA-221F-47DF-AC1D-259CFAA4E326 {
   //SECTION RAW = Platform/Bbkedu/sm7150/FdtBlob_compat/s6.dtb

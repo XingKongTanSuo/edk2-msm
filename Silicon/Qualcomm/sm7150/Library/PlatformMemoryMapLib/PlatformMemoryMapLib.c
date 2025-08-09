@@ -4,10 +4,11 @@
 static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     /* Name               Address     Length      HobOption        ResourceAttribute    ArmAttributes
                                                           ResourceType          MemoryType */
+    /* ================== 新增关键保留区域 ================== */
     {"TZ Comm Region",   0x00102000, 0x00001000, AddMem, MEM_RES, UNCACHEABLE, Reserv, UNCACHED_UNBUFFERED_XN},
     {"GPU Shared Mem",   0x10000000, 0x00200000, AddMem, MEM_RES, UNCACHEABLE, Reserv, UNCACHED_UNBUFFERED_XN},
     
-    /* DDR Regions */
+    /* ================== DDR Regions ================== */
     {"RAM Partition",    0x80000000, 0x01AC0000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
     {"HLOS 1",           0x81AC0000, 0x03B40000, AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK_XN},
     {"Runtime Data",     0x85600000, 0x00080000, AddMem, SYS_MEM, SYS_MEM_CAP, RtData, WRITE_BACK_XN},
@@ -38,12 +39,12 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     {"UEFI FD",          0xCE000000, 0x02000000, AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
     {"RAM Partition",    0xD0000000, 0x12CC00000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,  WRITE_BACK_XN},
     
-    /* Other memory regions */
+    /* ================== Other memory regions ================== */
     {"AOP_SS_MSG_RAM",   0x0C300000, 0x00100000, NoHob,  MMAP_IO, INITIALIZED, Conv, NS_DEVICE},
     {"IMEM Base",        0x14680000, 0x0002B000, NoHob,  MMAP_IO, INITIALIZED, Conv, NS_DEVICE},
     {"IMEM Cookie Base", 0x146AA000, 0x00001000, AddDev, MMAP_IO, INITIALIZED, Conv, NS_DEVICE},
 
-    /* Register regions */
+    /* ================== Register regions ================== */
     {"GCC CLK CTL",      0x00100000, 0x000B0000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
     {"SECURITY CONTROL", 0x00780000, 0x00007000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
     {"PRNG_CFG_PRNG",    0x00790000, 0x00010000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
