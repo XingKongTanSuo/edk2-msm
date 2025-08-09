@@ -22,14 +22,14 @@ APRIORI DXE {
   }
 
   FILE DRIVER = 8E9BD160-B184-11DF-94E2-0800200C9A66 {
-    SECTION DXE_DEPEX = Platform/EFI_Binaries/Drivers/sm7150/DALSys/DALSys.depex
-    SECTION PE32 = Platform/EFI_Binaries/Drivers/sm7150/DALSys/DALSys.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/DALSYSDxe/DALSYSDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/DALSYSDxe/DALSYSDxe.efi
     SECTION UI = "DALSys"
   }
 
   FILE DRIVER = af9763a2-033b-4109-8e17-56a98d380c92 {
-    SECTION DXE_DEPEX = Platform/EFI_Binaries/Drivers/sm7150/HWIODxeDriver/HWIODxeDriver.depex
-    SECTION PE32 = Platform/EFI_Binaries/Drivers/sm7150/HWIODxeDriver/HWIODxeDriver.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/HWIODxe/HWIODxe.depex
+    SECTION PE32 = Platform/bbk_drivers/HWIODxe/HWIODxe.efi
     SECTION UI = "HWIODxeDriver"
   }
 
@@ -78,8 +78,8 @@ APRIORI DXE {
   }
 
   FILE DRIVER = 4DB5DEA6-5302-4D1A-8A82-677A683B0D29 {
-    SECTION DXE_DEPEX = Platform/EFI_Binaries/Drivers/sm7150/ClockDxe/ClockDxe.depex
-    SECTION PE32 = Platform/EFI_Binaries/Drivers/sm7150/ClockDxe/ClockDxe.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/ClockDxe/ClockDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/ClockDxe/ClockDxe.efi
     SECTION UI = "ClockDxe"
   }
 
@@ -151,8 +151,8 @@ APRIORI DXE {
   }
 
   FILE DRIVER = 5776232e-082d-4b75-9a0e-fe1d13f7a5d9 {
-    SECTION DXE_DEPEX = Platform/EFI_Binaries/Drivers/sm7150/PmicDxe/PmicDxe.depex
-    SECTION PE32 = Platform/EFI_Binaries/Drivers/sm7150/PmicDxe/PmicDxe.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/PmicDxe/PmicDxeLa.depex
+    SECTION PE32 = Platform/bbk_drivers/PmicDxe/PmicDxeLa.efi
     SECTION UI = "PmicDxe"
   }
 
