@@ -1,10 +1,34 @@
 // per-device BSP DXEs
-FILE DRIVER = D3EB3EDA-74EF-C4B1-7AE9-1F62541DE5C7 {
-  SECTION DXE_DEPEX = Platform/bbk_drivers/PlatformInfoDxe/PlatformInfoDxe.depex
-  SECTION PE32 = Platform/bbk_drivers/PlatformInfoDxe/PlatformInfoDxe.efi
-  SECTION UI = "PlatformInfoDxeDriver"
-}
 
+  FILE DRIVER = CD823A4D-7DEC-4531-AE5D-4134FA4127B8 {
+    SECTION DXE_DEPEX = Platform/bbk_drivers/UsbConfigDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/ClockDxe/UsbConfigDxe.efi
+    SECTION UI = "UsbConfigDxe"
+  }
+  
+  FILE DRIVER = 3299A266-15F0-4346-8318-716336736D3E {
+    SECTION DXE_DEPEX = Platform/bbk_drivers/UsbDeviceDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/UsbDeviceDxe.efi
+    SECTION UI = "UsbDeviceDxe"
+  }
+  
+  FILE DRIVER = 11FAED4C-B21F-4D88-8E48-C4C28A1E50DF {
+	SECTION DXE_DEPEX = Platform/bbk_drivers/UsbPwrCtrlDxe.depex
+	SECTION PE32 = Platform/bbk_drivers/UsbPwrCtrlDxe.efi
+	SECTION UI = "UsbPwrCtrlDxe"
+  }
+  
+  FILE DRIVER = 5AF77F10-90DF-4E7E-8325-A17EC09D5443 {
+    SECTION DXE_DEPEX = Platform/bbk_drivers/UsbMsdDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/UsbMsdDxe.efi
+    SECTION UI = "UsbMsdDxe"
+  }
+  
+  FILE DRIVER = 94F8A6A7-DC34-4101-88C1-99179CCEAE83 {
+    SECTION DXE_DEPEX = Platform/bbk_drivers/UsbfnDwc3Dxe.depex
+    SECTION PE32 = Platform/bbk_drivers/UsbfnDwc3Dxe.efi
+    SECTION UI = "UsbfnDwc3Dxe"
+  }
 
 //FILE FREEFORM = 25462CDA-221F-47DF-AC1D-259CFAA4E326 {
   //SECTION RAW = Platform/Bbkedu/sm7150/FdtBlob_compat/s6.dtb
