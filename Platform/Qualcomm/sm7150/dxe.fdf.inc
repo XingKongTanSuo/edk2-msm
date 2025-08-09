@@ -24,8 +24,8 @@
   }
 
   FILE DRIVER = 8E9BD160-B184-11DF-94E2-0800200C9A66 {
-    SECTION DXE_DEPEX = Platform/EFI_Binaries/Drivers/sm7150/DALSys/DALSys.depex
-    SECTION PE32 = Platform/EFI_Binaries/Drivers/sm7150/DALSys/DALSys.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/DALSYSDxe/DALSYSDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/DALSYSDxe/DALSYSDxe.efi
     SECTION UI = "DALSys"
   }
 
@@ -42,8 +42,8 @@
   }
 
   FILE DRIVER = af9763a2-033b-4109-8e17-56a98d380c92 {
-    SECTION DXE_DEPEX = Platform/EFI_Binaries/Drivers/sm7150/HWIODxeDriver/HWIODxeDriver.depex
-    SECTION PE32 = Platform/EFI_Binaries/Drivers/sm7150/HWIODxeDriver/HWIODxeDriver.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/HWIODxe/HWIODxe.depex
+    SECTION PE32 = Platform/bbk_drivers/HWIODxe/HWIODxe.efi
     SECTION UI = "HWIODxeDriver"
   }
 
@@ -60,8 +60,8 @@
   }
 
   FILE DRIVER = B105211B-BBBD-4ADD-A3B0-D1CF4A52154C {
-    SECTION DXE_DEPEX = Platform/EFI_Binaries/Drivers/sm7150/PlatformInfoDxeDriver/PlatformInfoDxeDriver.depex
-    SECTION PE32 = Platform/EFI_Binaries/Drivers/sm7150/PlatformInfoDxeDriver/PlatformInfoDxeDriver.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/PlatformInfoDxe/PlatformInfoDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/PlatformInfoDxe/PlatformInfoDxe.efi
     SECTION UI = "PlatformInfoDxeDriver"
   }
 

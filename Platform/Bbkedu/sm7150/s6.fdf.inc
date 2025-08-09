@@ -1,5 +1,9 @@
 // per-device BSP DXEs
-
+FILE DRIVER = D3EB3EDA-74EF-C4B1-7AE9-1F62541DE5C7 {
+  SECTION DXE_DEPEX = Platform/bbk_drivers/PlatformInfoDxe/PlatformInfoDxe.depex
+  SECTION PE32 = Platform/bbk_drivers/PlatformInfoDxe/PlatformInfoDxe.efi
+  SECTION UI = "PlatformInfoDxeDriver"
+}
 
 
 //FILE FREEFORM = 25462CDA-221F-47DF-AC1D-259CFAA4E326 {
