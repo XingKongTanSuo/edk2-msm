@@ -30,7 +30,7 @@
   }
   
   FILE DRIVER =B7F50E91-A759-412C-ADE4-DCD03E7F7C28 {
-    SECTION DXE_DEPEX = Platform/bbk_drivers//XhciDxe.depex
+    SECTION DXE_DEPEX = Platform/bbk_drivers/XhciDxe.depex
     SECTION PE32 = Platform/bbk_drivers/XhciDxe.efi
     SECTION UI = "XhciDxe"
   }
