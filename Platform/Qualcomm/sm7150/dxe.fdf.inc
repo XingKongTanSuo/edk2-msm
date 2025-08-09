@@ -60,8 +60,8 @@
   }
 
   FILE DRIVER = B105211B-BBBD-4ADD-A3B0-D1CF4A52154C {
-    SECTION DXE_DEPEX = Platform/EFI_Binaries/Drivers/sm7150/PlatformInfoDxeDriver/PlatformInfoDxeDriver.depex
-    SECTION PE32 = Platform/EFI_Binaries/Drivers/sm7150/PlatformInfoDxeDriver/PlatformInfoDxeDriver.efi
+    SECTION DXE_DEPEX = Platform/bbk_drivers/PlatformInfoDxe/PlatformInfoDxe.depex
+    SECTION PE32 = Platform/bbk_drivers/PlatformInfoDxe/PlatformInfoDxe.efi
     SECTION UI = "PlatformInfoDxeDriver"
   }
 
