@@ -2,13 +2,8 @@
 #include <Library/PlatformMemoryMapLib.h>
 
 static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
-    /* Name               Address     Length      HobOption        ResourceAttribute    ArmAttributes
-                                                          ResourceType          MemoryType */
-    /* ================== 新增关键保留区域 ================== */
     {"TZ Comm Region",   0x00102000, 0x00001000, AddMem, MEM_RES, UNCACHEABLE, Reserv, UNCACHED_UNBUFFERED_XN},
     {"GPU Shared Mem",   0x10000000, 0x00200000, AddMem, MEM_RES, UNCACHEABLE, Reserv, UNCACHED_UNBUFFERED_XN},
-    
-    /* ================== DDR Regions ================== */
     {"RAM Partition",    0x80000000, 0x01AC0000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
     {"HLOS 1",           0x81AC0000, 0x03B40000, AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK_XN},
     {"Runtime Data",     0x85600000, 0x00080000, AddMem, SYS_MEM, SYS_MEM_CAP, RtData, WRITE_BACK_XN},
@@ -38,7 +33,7 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     {"DXE Heap",         0xC0000000, 0x0E000000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK_XN},
     {"UEFI FD",          0xCE000000, 0x02000000, AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
     {"RAM Partition",    0xD0000000, 0x12CC00000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,  WRITE_BACK_XN},
-    
+
     /* ================== Other memory regions ================== */
     {"AOP_SS_MSG_RAM",   0x0C300000, 0x00100000, NoHob,  MMAP_IO, INITIALIZED, Conv, NS_DEVICE},
     {"IMEM Base",        0x14680000, 0x0002B000, NoHob,  MMAP_IO, INITIALIZED, Conv, NS_DEVICE},
@@ -59,37 +54,6 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     {"TLMM_SOUTH",       0x03D00000, 0x00300000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
     {"GPU_CC",           0x05090000, 0x00010000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
     {"GPU_CPR",          0x0509A000, 0x00004000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"RPMH_CPRF",        0x0C200000, 0x0000F000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"QUPV3_SSC_GSI",    0x62600000, 0x000D0000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"PERIPH_SS",        0x08800000, 0x00200000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"MCCC_MCCC_MSTR",   0x090B0000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"USB30_PRIM",       0x0A600000, 0x0011B000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"USB_RUMI",         0x0A720000, 0x00010000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"PDC_DISPLAY",      0x0B2A0000, 0x00010000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"PDC_DISP_SEQ",     0x0B4A0000, 0x00010000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"RPMH_BCM_BCM_TOP", 0x0BA00000, 0x00200000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"SLP_CNTR",         0x0C221000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"TSENS0",           0x0C222000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"TSENS1",           0x0C223000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"TSENS0_TM",        0x0C263000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"PSHOLD",           0x0C264000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"TSENS1_TM",        0x0C265000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"PMIC ARB SPMI",    0x0C400000, 0x02800000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"VIDEO_CC",         0x0AB00000, 0x00010000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"NPU_CC",           0x09910000, 0x00010000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"TITAN_CAM_CC",     0x0AD00000, 0x00010000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"DISP_CC",          0x0AF00000, 0x00020000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"SILVER_CLK_CTL",   0x18280000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"GOLD_CLK_CTL",     0x18282000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"L3_CLK_CTL",       0x18284000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"APSS_RSC_RSCCR",   0x18200000, 0x00030000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"APSS_GIC500_GICD", 0x17A00000, 0x00010000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"APSS_GIC500_GICR", 0x17A60000, 0x00100000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"QTIMER",           0x17C00000, 0x00110000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"APSS_WDT_TMR1",    0x17C10000, 0x00001000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"APSS_ACTPM_WRAP",  0x18300000, 0x000B0000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"MDSS",             0x0AE00000, 0x00134000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
-    {"SMMU",             0x15000000, 0x000D0000, AddDev, MMAP_IO, UNCACHEABLE, MmIO, NS_DEVICE},
 
     /* Terminator for MMU */
     {"Terminator", 0, 0, 0, 0, 0, 0, 0},
@@ -97,5 +61,5 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
 
 ARM_MEMORY_REGION_DESCRIPTOR_EX *GetPlatformMemoryMap()
 {
-  return gDeviceMemoryDescriptorEx;
+    return gDeviceMemoryDescriptorEx;
 }
