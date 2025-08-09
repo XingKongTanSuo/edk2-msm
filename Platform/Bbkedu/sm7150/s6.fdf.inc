@@ -1,10 +1,7 @@
 // per-device BSP DXEs
-
-
-
   FILE DRIVER = CD823A4D-7DEC-4531-AE5D-4134FA4127B8 {
     SECTION DXE_DEPEX = Platform/bbk_drivers/UsbConfigDxe.depex
-    SECTION PE32 = Platform/bbk_drivers/ClockDxe/UsbConfigDxe.efi
+    SECTION PE32 = Platform/bbk_drivers/UsbConfigDxe.efi
     SECTION UI = "UsbConfigDxe"
   }
   
