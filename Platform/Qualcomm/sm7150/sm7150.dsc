@@ -65,13 +65,3 @@
   SOCSmbiosInfoLib|Silicon/Qualcomm/sm7150/Library/SOCSmbiosInfoLib/SOCSmbiosInfoLib.inf
 
 [Components.common]
-  Common/edk2/MdeModulePkg/Bus/Pci/XhciDxe/XhciDxe.inf
-  Common/edk2/MdeModulePkg/Bus/Pci/EhciDxe/EhciDxe.inf
-  Common/edk2/MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBusDxe.inf
-  Common/edk2/MdeModulePkg/Bus/Usb/UsbKbDxe/UsbKbDxe.inf
-  Common/edk2/MdeModulePkg/Bus/Usb/UsbMouseDxe/UsbMouseDxe.inf
-  Common/edk2/MdeModulePkg/Bus/Usb/UsbMassStorageDxe/UsbMassStorageDxe.inf
-  Common/edk2/MdeModulePkg/Bus/Usb/UsbHubDxe/UsbHubDxe.inf
-  Common/edk2/NetworkPkg/UsbDxe/UsbNetworkDxe.inf
-  Silicon/Qualcomm/QcomPkg/Drivers/XhciPciEmulationDxe/XhciPciEmulationDxe.inf
-  Silicon/Qualcomm/QcomPkg/Drivers/Dwc3Dxe/Dwc3Dxe.inf
