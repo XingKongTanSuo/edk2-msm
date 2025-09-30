@@ -27,3 +27,5 @@
   gRenegadePkgTokenSpaceGuid.PcdDeviceVendor|"Bbkedu"
   gRenegadePkgTokenSpaceGuid.PcdDeviceProduct|"S6"
   gRenegadePkgTokenSpaceGuid.PcdDeviceCodeName|"sm6150"
+
+GCC:__AARCH64_CC_FLAGS = -DENABLE_SIMPLE_INIT
