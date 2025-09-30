@@ -24,6 +24,8 @@ jobs:
         device:
           # sm7150
           - sm6150
+          # sdm660
+          - h7000
           # sm8150
           - mh2lm
           - betalm
