@@ -20,10 +20,3 @@
   gQcomTokenSpaceGuid.PcdMipiFrameBufferWidth|1600
   gQcomTokenSpaceGuid.PcdMipiFrameBufferHeight|2176
   # gQcomTokenSpaceGuid.PcdMipiFrameBufferAddress|0x9c400000
-
-  # Simple Init
-  gSimpleInitTokenSpaceGuid.PcdGuiDefaultDPI|320
-
-  gRenegadePkgTokenSpaceGuid.PcdDeviceVendor|"Bbkedu"
-  gRenegadePkgTokenSpaceGuid.PcdDeviceProduct|"S6"
-  gRenegadePkgTokenSpaceGuid.PcdDeviceCodeName|"sm6150"
