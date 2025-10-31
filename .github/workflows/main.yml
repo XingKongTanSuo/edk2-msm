@@ -45,6 +45,8 @@ jobs:
           - lisa
           # msm8998
           - cheeseburger
+          # sdm660
+          - h7000
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
